@@ -1,0 +1,25 @@
+.archive60-reference {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: transparent;
+  border-radius: 0;
+}
+
+.archive60-reference iframe {
+  display: block;
+  width: 100%;
+  height: 900px;
+  min-height: 0;
+  border: 0;
+  background: transparent;
+}
+
+@media (max-width: 900px) {
+  .archive60-reference iframe { height: 1080px; }
+}
+
+@media (max-width: 640px) {
+  .archive60-reference iframe { height: 1280px; }
+}

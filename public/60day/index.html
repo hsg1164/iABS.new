@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: blob: https://ik.imagekit.io/ld5rplgcm/ https://ik.imagekit.io/jco71x7fu/ https://*.supabase.co; media-src blob: https://ik.imagekit.io/ld5rplgcm/ https://ik.imagekit.io/jco71x7fu/ https://*.supabase.co; connect-src https://mqegvdtuyqglxjqakfha.supabase.co https://*.supabase.co; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>أرشيف جدار الـ60 يوم | iABS</title>
+<script src="route-wall3.js"></script>
+<meta name="description" content="أرشيف جدار إيديتات ورسائل مجتمع أساطير الشات — تحدي الـ60 يوم. اكتمل التحدي وكل الذكريات محفوظة للأبد.">
+<meta name="theme-color" content="#0A0507">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Changa:wght@500;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<style>
+/* ================= نافذة علوية ================= */
+.topnav { position: fixed; top: 0; inset-inline: 0; z-index: 60; background: rgba(10, 6, 8, 0.82); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid var(--line); }
+.topnav:after { content: ""; position: absolute; bottom: -1px; inset-inline: 12%; height: 1.5px; background: linear-gradient(90deg, transparent, var(--rose), var(--champ), transparent); opacity: 0.7; }
+.topnav .in { display: flex; align-items: center; gap: 12px; padding: 10px 0; }
+.brand { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.brand .mark { width: 40px; height: 40px; border-radius: 13px; flex: none; display: grid; place-items: center; background: linear-gradient(150deg, var(--wine-400), var(--wine-700) 70%); border: 1px solid rgba(255, 138, 138, 0.4); box-shadow: 0 0 22px -4px rgba(255, 45, 45, 0.55); }
+.brand .mark svg { width: 21px; height: 21px; color: var(--champ); }
+.brand b { font-size: 15px; font-weight: 900; display: block; line-height: 1.25; }
+.brand small { display: block; font-size: 9.5px; font-weight: 800; letter-spacing: 0.14em; color: var(--rose-soft); }
+.nav-links { display: flex; gap: 2px; margin-inline-start: auto; }
+.nav-links a { padding: 8px 14px; border-radius: 11px; font-size: 12.5px; font-weight: 800; color: var(--muted); transition: 0.25s; }
+.nav-links a:hover, .nav-links a.on { color: var(--text); background: rgba(255, 45, 45, 0.1); }
+.nav-acts { display: flex; gap: 8px; align-items: center; }
+.day-pill { display: inline-flex; align-items: center; gap: 7px; padding: 7px 13px; border-radius: 99px; border: 1px solid rgba(255, 45, 45, 0.4); background: rgba(255, 45, 45, 0.08); color: var(--rose-soft); font-size: 11.5px; font-weight: 900; white-space: nowrap; }
+.day-pill svg { width: 13px; height: 13px; }
+@media (max-width: 860px) { .nav-links { display: none; } .brand small { display: none; } }
+@media (max-width: 480px) { .day-pill span.lbl { display: none; } .brand b { font-size: 13px; } }
+
+/* ================= هيرو ================= */
+.hero { padding: 118px 0 34px; display: grid; grid-template-columns: 1.08fr 0.92fr; gap: 26px; align-items: center; }
+.hero h1 { font-size: clamp(34px, 5.6vw, 58px); font-weight: 900; line-height: 1.18; margin: 12px 0 10px; }
+.hero h1 .grad { background: linear-gradient(115deg, #fff 10%, var(--rose-soft) 45%, var(--rose) 70%, var(--champ)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.hero .lead { color: var(--muted); font-size: 14.5px; font-weight: 600; max-width: 520px; margin: 0 0 18px; }
+.hero .keepsake { display: flex; align-items: flex-start; gap: 12px; max-width: 520px; margin-bottom: 18px; padding: 14px 16px; border-radius: 17px; border: 1px solid rgba(255, 45, 45, 0.3); background: linear-gradient(135deg, rgba(255, 45, 45, 0.08), rgba(90, 15, 24, 0.16)); }
+.hero .keepsake .icon { width: 38px; height: 38px; flex: none; display: grid; place-items: center; border-radius: 12px; background: rgba(255, 45, 45, 0.1); color: var(--rose-soft); }
+.hero .keepsake svg { width: 22px; height: 22px; }
+.hero .keepsake b { display: block; font-size: 13px; font-weight: 900; color: var(--rose-soft); }
+.hero .keepsake p { margin: 4px 0 0; font-size: 11.5px; font-weight: 600; line-height: 1.8; color: var(--muted); }
+.hero-stats { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 18px; }
+.hstat { flex: 1; min-width: 108px; padding: 12px 16px; border-radius: 17px; border: 1px solid var(--line); background: linear-gradient(160deg, rgba(26, 16, 19, 0.85), rgba(14, 8, 10, 0.9)); }
+.hstat b { display: block; font-size: 24px; font-weight: 900; line-height: 1.2; color: var(--rose); }
+.hstat span { font-size: 10.5px; font-weight: 800; color: var(--muted); letter-spacing: 0.04em; }
+.hero-cta { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px; }
+/* ---------- سطر الاكتمال ---------- */
+.hero-day { max-width: 520px; }
+.hero-day .row { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 7px; font-size: 11.5px; font-weight: 800; color: var(--muted); }
+.hero-day .row b { color: var(--rose-soft); font-size: 13px; }
+.hero-day .pbar { height: 8px; }
+.hero-day .note { font-size: 11px; color: var(--faint); margin-top: 7px; font-weight: 700; }
+.hero-day .note b { color: var(--rose-soft); }
+
+/* آيفون أحمر */
+.hero-vis { position: relative; display: grid; place-items: center; min-height: 380px; perspective: 900px; }
+.hero-vis .ring { position: absolute; width: 330px; height: 330px; border-radius: 50%; background: conic-gradient(from 0deg, transparent 0 18%, rgba(255, 45, 45, 0.5) 30%, transparent 46%, rgba(245, 233, 228, 0.4) 62%, transparent 78%, rgba(139, 18, 32, 0.6) 90%, transparent); filter: blur(2px); opacity: 0.8; }
+.hero-vis .ring:after { content: ""; position: absolute; inset: 14px; border-radius: 50%; background: var(--bg); }
+.hero-vis .glow { position: absolute; width: 300px; height: 300px; border-radius: 50%; background: radial-gradient(circle, rgba(255, 45, 45, 0.28), rgba(90, 15, 24, 0.18) 45%, transparent 70%); filter: blur(24px); }
+.phone3d { position: relative; width: 290px; height: 290px; scale: 1.3; translate: 0 -22px; transform-style: preserve-3d; transition: transform 0.5s var(--ease); }
+.phone3d .phone-model { position: absolute; inset: 0; transform-style: preserve-3d; transform: rotateX(-12deg) rotateY(-20deg); }
+.phone3d .duo { position: absolute; left: 43px; bottom: 20px; width: 204px; height: 231px; scale: 0.86; transform-origin: 50% 100%; transform-style: preserve-3d; }
+.phone3d .ip { position: absolute; top: 0; width: 110px; height: 231px; border-radius: 25px; }
+.phone3d .ipb { left: 0; z-index: 2; transform: translateZ(16px); background: linear-gradient(155deg, #8B1220 0%, #5A0F18 48%, #2A0810 100%); box-shadow: inset 0 0 0 1.5px #d08a8aaa, inset 0 0 0 3px #00000040, inset 0 -10px 18px #0006, 0 18px 30px #000b, 0 0 22px #b02a2a33; }
+.phone3d .ipf { left: 94px; z-index: 1; transform: translateZ(-12px); background: linear-gradient(145deg, #A31622, #5A0F18 60%, #2A0810); box-shadow: inset 0 0 0 1.5px #d09a9aaa, 0 18px 30px #000b; }
+.phone3d .plat { position: absolute; left: 0; right: 0; top: 0; height: 65px; border-radius: 25px 25px 17px 17px; background: linear-gradient(150deg, #9B1420, #6B1018 55%, #4A0C14); box-shadow: inset 0 0 0 1px #e6a2a255, inset 0 -3px 8px #0005, 0 5px 10px #0007; }
+.phone3d .gp { position: absolute; left: 5px; right: 5px; top: 71px; bottom: 5px; border-radius: 17px 17px 21px 21px; background: linear-gradient(165deg, rgba(255,255,255,.09), rgba(255,255,255,.015) 60%); box-shadow: inset 0 0 0 1px #ffc0c018, inset 0 0 14px #00000030; }
+.phone3d .lens { position: absolute; width: 26px; height: 26px; border-radius: 50%; background: radial-gradient(circle at 34% 30%, #7c8cc6 0 7%, #201b30 30%, #07060c 70%); border: 3.5px solid #4A0C14; box-shadow: 0 0 0 1px #e29a9a77, 0 3px 6px #000b, inset 0 0 5px #000; }
+.phone3d .lens:after { content: ""; position: absolute; inset: 4px; border-radius: 50%; border: 1px solid #ffffff22; }
+.phone3d .fls { position: absolute; right: 15px; top: 14px; width: 11px; height: 11px; border-radius: 50%; background: radial-gradient(circle at 40% 35%, #fff, #d8d8d8 60%, #9a9a9a); box-shadow: 0 0 0 2px #4A0C14, 0 0 6px #fff8; }
+.phone3d .mc { position: absolute; right: 20px; top: 33px; width: 2px; height: 2px; border-radius: 50%; background: #150A0D; }
+.phone3d .ld { position: absolute; right: 14px; top: 41px; width: 13px; height: 13px; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #2a2a2a, #050505 70%); box-shadow: 0 0 0 1px #00000088; }
+.phone3d .apl { position: absolute; left: 50%; top: 131px; width: 24px; height: 24px; margin-left: -13px; fill: #7A1420; filter: drop-shadow(0 1px 0 #ffb8b822); }
+.phone3d .shine { position: absolute; inset: 0; border-radius: inherit; background: linear-gradient(118deg, transparent 28%, #ffffff26 46%, transparent 62%); pointer-events: none; }
+.phone3d .scr { position: absolute; inset: 3.5px; border-radius: 21.5px; overflow: hidden; background: radial-gradient(120% 60% at 85% 20%, #5A0F18, transparent 70%), linear-gradient(180deg, #2A0810, #150508); box-shadow: inset 0 0 0 1px #000; }
+.phone3d .wa { position: absolute; border: 1.2px solid rgba(255,170,170,.75); background: linear-gradient(135deg, #4A0C14, #2A0810); box-shadow: 0 0 7px rgba(255,110,110,.55), inset 0 0 12px rgba(255,120,120,.4); }
+.phone3d .a1 { right: -2px; top: 16px; width: 70px; height: 66px; border-radius: 0 0 0 36px; }
+.phone3d .a2 { left: -2px; top: 88px; width: 76px; height: 58px; border-radius: 0 36px 0 0; }
+.phone3d .a3 { right: -2px; top: 152px; width: 70px; height: 62px; border-radius: 0 0 0 36px; }
+.phone3d .a4 { left: -2px; top: -4px; width: 34px; height: 44px; border-radius: 0 0 22px 0; }
+.phone3d .di2 { position: absolute; left: 50%; top: 6px; width: 32px; height: 9px; margin-left: -16px; border-radius: 9px; background: #000; box-shadow: 0 0 0 .5px #ffffff18; }
+.phone3d .sb { position: absolute; left: -1.5px; width: 2px; border-radius: 2px; background: #A85A5A; }
+.phone3d .s1 { top: 50px; height: 10px; }
+.phone3d .s2 { top: 68px; height: 18px; }
+.phone3d .s3 { top: 90px; height: 18px; }
+.fchip { position: absolute; display: flex; align-items: center; gap: 7px; padding: 8px 13px; border-radius: 13px; background: rgba(18, 10, 12, 0.88); border: 1px solid var(--line-strong); backdrop-filter: blur(8px); font-size: 11px; font-weight: 900; box-shadow: 0 14px 30px -12px rgba(0, 0, 0, 0.7); }
+.fchip svg { width: 15px; height: 15px; }
+.fchip.c1 { top: 12%; right: 6%; color: var(--rose-soft); }
+.fchip.c2 { bottom: 16%; right: 12%; color: var(--champ); }
+.fchip.c3 { top: 40%; left: 2%; color: var(--info); }
+@media (max-width: 900px) { .hero { grid-template-columns: 1fr; padding-top: 104px; } .hero-vis { min-height: 330px; order: -1; } .phone3d { scale: 0.93; translate: 0 -14px; } .hero-vis .ring { width: 260px; height: 260px; } }
+
+/* ================= شريط الأرشيف ================= */
+.arch-sec { padding: 8px 0 6px; }
+.arch-note { display: flex; align-items: center; gap: 14px; padding: 16px 20px; border-radius: 18px; border: 1px solid rgba(255, 45, 45, 0.3); background: linear-gradient(135deg, rgba(255, 45, 45, 0.07), rgba(90, 15, 24, 0.12)); }
+.arch-note .ic { width: 42px; height: 42px; flex: none; display: grid; place-items: center; border-radius: 13px; background: linear-gradient(145deg, var(--wine-500), var(--wine-800)); border: 1px solid rgba(255, 138, 138, 0.35); color: var(--rose-soft); }
+.arch-note .ic svg { width: 20px; height: 20px; }
+.arch-note b { display: block; font-size: 13.5px; font-weight: 900; color: var(--text); }
+.arch-note p { margin: 3px 0 0; font-size: 11.5px; font-weight: 600; color: var(--muted); line-height: 1.7; }
+.arch-note .chip { margin-inline-start: auto; flex: none; }
+@media (max-width: 640px) { .arch-note { flex-wrap: wrap; } .arch-note .chip { margin-inline-start: 0; } }
+
+/* ================= الجدار ================= */
+.wall-sec { padding: 34px 0 20px; }
+.wall-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 16px; }
+.gallery-seg { display: inline-flex; gap: 5px; padding: 5px; border-radius: 17px; background: rgba(10, 6, 8, 0.8); border: 1px solid var(--line-strong); box-shadow: 0 14px 34px -18px rgba(0, 0, 0, 0.8); }
+.gallery-seg button { display: inline-flex; align-items: center; gap: 9px; border: none; background: transparent; color: var(--muted); font-weight: 900; font-size: 13.5px; padding: 12px 20px; border-radius: 13px; transition: 0.3s var(--ease); }
+.gallery-seg button svg { width: 17px; height: 17px; }
+.gallery-seg button .n { font-size: 10.5px; padding: 2px 9px; border-radius: 99px; background: rgba(255, 255, 255, 0.09); font-variant-numeric: tabular-nums; }
+.gallery-seg button.on { background: linear-gradient(135deg, var(--wine-400), var(--rose-deep) 80%); color: #fff; box-shadow: 0 10px 26px -8px rgba(255, 45, 45, 0.65); }
+.gallery-seg button.on .n { background: rgba(255, 255, 255, 0.22); }
+.wall-tools { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 16px; }
+.wall-tools .count { margin-inline-start: auto; font-size: 11.5px; font-weight: 800; color: var(--faint); }
+.wall-cols { display: flex; align-items: flex-start; gap: 12px; }
+.wall-col { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 12px; }
+
+/* كارت الميديا */
+.wcard { position: relative; border-radius: 22px; overflow: hidden; border: 1px solid rgba(245, 233, 228, 0.14); background: linear-gradient(160deg, rgba(26, 16, 19, 0.95), rgba(14, 8, 10, 0.92)); box-shadow: 0 6px 22px rgba(0, 0, 0, 0.4); cursor: pointer; transition: transform 0.5s var(--ease), border-color 0.5s, box-shadow 0.5s; opacity: 0; transform: translateY(30px); animation: cardin 0.55s var(--ease) forwards; animation-delay: var(--dl, 0s); }
+@keyframes cardin { to { opacity: 1; transform: none; } }
+.wcard:hover { transform: translateY(-6px); border-color: rgba(255, 45, 45, 0.5); box-shadow: 0 14px 45px rgba(255, 45, 45, 0.18), 0 0 60px rgba(245, 233, 228, 0.08); }
+.wcard .media { position: relative; width: 100%; overflow: hidden; background: rgba(0, 0, 0, 0.5); }
+.wcard .media img, .wcard .media video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.wcard .media img.thumb { transition: transform 0.7s var(--ease); }
+.wcard:hover .media img.thumb { transform: scale(1.1); }
+.wcard .media .thumb-empty { position: absolute; inset: 0; background: radial-gradient(circle at 32% 26%, rgba(255, 45, 45, 0.22), transparent 55%), radial-gradient(circle at 74% 78%, rgba(245, 233, 228, 0.12), transparent 52%), linear-gradient(150deg, #1B0A0E, #0F0608); }
+.wcard .media .thumb-empty::after { content: ''; position: absolute; inset: 0; background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px); background-size: 18px 18px; opacity: 0.5; }
+.wcard .media .shade { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.1) 45%, transparent); pointer-events: none; }
+.wcard .playbtn { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) scale(0.8); width: 48px; height: 48px; border-radius: 50%; display: grid; place-items: center; background: rgba(0, 0, 0, 0.45); backdrop-filter: blur(6px); border: 1.5px solid rgba(255, 45, 45, 0.55); color: #fff; opacity: 0; transition: 0.35s var(--ease); pointer-events: none; }
+.wcard .playbtn svg { width: 20px; height: 20px; margin-inline-start: 2px; }
+.wcard:hover .playbtn { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+.wcard .vbadge { position: absolute; top: 12px; left: 12px; display: inline-flex; align-items: center; gap: 5px; height: 26px; padding: 0 10px; border-radius: 99px; background: rgba(0, 0, 0, 0.55); backdrop-filter: blur(6px); border: 1px solid rgba(245, 233, 228, 0.3); font-size: 9.5px; font-weight: 900; letter-spacing: 0.08em; color: var(--champ); pointer-events: none; }
+.wcard .vbadge svg { width: 11px; height: 11px; }
+.wcard .likepill { position: absolute; top: 12px; right: 12px; z-index: 3; display: inline-flex; align-items: center; gap: 5px; height: 28px; padding: 0 11px; border-radius: 99px; background: rgba(0, 0, 0, 0.55); backdrop-filter: blur(6px); border: 1px solid rgba(255, 255, 255, 0.14); color: #fff; font-size: 11px; font-weight: 900; pointer-events: none; }
+.wcard .likepill svg { width: 13px; height: 13px; color: var(--rose); }
+.wcard .body { padding: 16px; }
+.wcard .who { font-size: 11px; font-weight: 900; letter-spacing: 0.14em; color: var(--rose-soft); margin-bottom: 5px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.wcard .cap { font-size: 13.5px; line-height: 1.75; color: rgba(248, 241, 238, 0.72); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 2.6em; word-break: break-word; }
+.wcard .when { font-size: 10.5px; letter-spacing: 0.1em; color: rgba(248, 241, 238, 0.28); margin-top: 7px; font-weight: 700; }
+.wcard .broken { position: absolute; inset: 0; display: grid; place-items: center; color: var(--faint); font-size: 11px; font-weight: 800; background: linear-gradient(135deg, rgba(30, 10, 14, 0.9), rgba(10, 6, 8, 0.95)); }
+
+/* كارت الرسالة */
+.mcard { position: relative; border-radius: 22px; border: 1px solid rgba(245, 233, 228, 0.14); background: linear-gradient(160deg, rgba(26, 16, 19, 0.95), rgba(14, 8, 10, 0.92)); box-shadow: 0 6px 22px rgba(0, 0, 0, 0.4); padding: 18px; transition: transform 0.5s var(--ease), border-color 0.5s, box-shadow 0.5s; opacity: 0; transform: translateY(30px); animation: cardin 0.55s var(--ease) forwards; animation-delay: var(--dl, 0s); overflow: hidden; }
+.mcard:before { content: ""; position: absolute; top: 0; inset-inline: 0; height: 3px; background: linear-gradient(90deg, transparent, var(--ac, var(--rose)), transparent); opacity: 0.75; }
+.mcard:hover { transform: translateY(-6px) rotate(var(--tilt, 0deg)); border-color: rgba(255, 45, 45, 0.45); box-shadow: 0 14px 45px rgba(255, 45, 45, 0.16); }
+.mcard .head { display: flex; align-items: center; gap: 11px; margin-bottom: 11px; }
+.mcard .av { width: 44px; height: 44px; border-radius: 50%; overflow: hidden; flex: none; border: 2px solid rgba(245, 233, 228, 0.3); }
+.mcard .av > svg { width: 100%; height: 100%; }
+.mcard .head .nm { min-width: 0; }
+.mcard .head b { display: block; font-size: 13px; font-weight: 900; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.mcard .head small { font-size: 10px; color: var(--faint); font-weight: 800; letter-spacing: 0.06em; }
+.mcard .txt { font-size: 14.5px; line-height: 1.95; color: rgba(248, 241, 238, 0.88); word-break: break-word; white-space: pre-wrap; }
+.mcard .foot { display: flex; align-items: center; justify-content: space-between; margin-top: 13px; padding-top: 11px; border-top: 1px solid rgba(245, 233, 228, 0.09); }
+.mcard .when { font-size: 10px; color: rgba(248, 241, 238, 0.3); font-weight: 800; letter-spacing: 0.08em; }
+.mcard .likepill { display: inline-flex; align-items: center; gap: 5px; height: 27px; padding: 0 11px; border-radius: 99px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.1); color: var(--muted); font-size: 11px; font-weight: 900; pointer-events: none; }
+.mcard .likepill svg { width: 12px; height: 12px; color: var(--rose); }
+.mcard .anon-badge { font-size: 9px; padding: 2px 8px; border-radius: 99px; background: rgba(106, 184, 255, 0.1); border: 1px solid rgba(106, 184, 255, 0.35); color: var(--info); font-weight: 900; }
+
+/* ================= لايت بوكس ================= */
+.lb-backdrop { position: fixed; inset: 0; z-index: 100; background: rgba(6, 3, 4, 0.92); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); display: none; }
+.lb-backdrop.open { display: flex; align-items: center; justify-content: center; animation: lbin 0.3s; }
+@keyframes lbin { from { opacity: 0; } }
+.lb { display: grid; grid-template-columns: minmax(0, 1fr) 330px; grid-template-rows: minmax(0, 1fr); width: min(1180px, 96vw); height: min(84dvh, 860px); border-radius: 24px; overflow: hidden; border: 1px solid var(--line-strong); background: #0F0608; box-shadow: 0 60px 120px -40px #000; }
+.lb .stage { position: relative; background: #000; min-width: 0; min-height: 0; overflow: hidden; }
+.lb .stage img, .lb .stage video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
+.lb .stage video { direction: ltr; }
+.lb .stage video:fullscreen { object-fit: contain; background: #000; }
+.lb .side { display: flex; flex-direction: column; min-width: 0; min-height: 0; padding: 22px; border-inline-start: 1px solid var(--line); overflow-y: auto; }
+.lb .side .who { display: flex; align-items: center; gap: 10px; flex-shrink: 0; margin-bottom: 12px; }
+.lb .side .who .badge { width: 40px; height: 40px; border-radius: 13px; display: grid; place-items: center; background: linear-gradient(145deg, var(--wine-400), var(--wine-700)); border: 1px solid rgba(255, 138, 138, 0.4); color: var(--champ); font-weight: 900; font-size: 16px; flex: none; }
+.lb .side .who b { font-size: 15px; font-weight: 900; display: block; }
+.lb .side .who small { color: var(--faint); font-size: 10.5px; font-weight: 800; }
+.lb .side .cap { min-height: 0; overflow-y: auto; font-size: 13.5px; line-height: 1.9; color: rgba(248, 241, 238, 0.8); word-break: break-word; white-space: pre-wrap; margin-bottom: 16px; }
+.lb .side .lb-likes { display: inline-flex; align-items: center; gap: 7px; align-self: flex-start; padding: 7px 14px; border-radius: 99px; border: 1px solid rgba(255, 45, 45, 0.4); background: rgba(255, 45, 45, 0.08); color: var(--rose-soft); font-size: 12px; font-weight: 900; margin-bottom: 14px; flex-shrink: 0; }
+.lb .side .lb-likes svg { width: 14px; height: 14px; color: var(--rose); }
+.lb .side .acts { margin-top: auto; display: grid; gap: 9px; flex-shrink: 0; }
+.lb .navbtn { position: absolute; top: 50%; transform: translateY(-50%); z-index: 5; width: 44px; height: 44px; border-radius: 50%; background: rgba(14, 8, 10, 0.75); border: 1px solid var(--line-strong); color: #fff; display: grid; place-items: center; backdrop-filter: blur(8px); transition: 0.25s; }
+.lb .navbtn:hover { background: var(--wine-500); border-color: var(--rose); }
+.lb .navbtn svg { width: 18px; height: 18px; }
+.lb .navbtn.prev { right: 14px; }
+.lb .navbtn.next { left: 14px; }
+.lb .closebtn { position: absolute; top: 14px; left: 14px; z-index: 6; }
+.lb .counter { position: absolute; top: 14px; right: 16px; height: fit-content; pointer-events: none; z-index: 5; font-size: 11px; font-weight: 900; color: rgba(255, 255, 255, 0.6); background: rgba(0, 0, 0, 0.5); padding: 4px 12px; border-radius: 99px; backdrop-filter: blur(6px); }
+@media (max-width: 860px) {
+  .lb { grid-template-columns: 1fr; grid-template-rows: minmax(0, 1fr) auto; width: 100vw; height: 100dvh; border-radius: 0; border: none; }
+  .lb .side { border-inline-start: none; border-top: 1px solid var(--line); max-height: 38dvh; padding: 16px; }
+  .lb .side .acts { grid-template-columns: 1fr 1fr; }
+}
+/* Direct wall entry: keep the archive grid as the first visible content. */
+html.wall-only .hero,
+html.wall-only .arch-note,
+html.wall-only .notice,
+html.wall-only .arch-sec { display: none !important; }
+html.wall-only .wall-sec { padding-top: 96px; }
+html.wall-only .topnav { display:none !important; }
+.wall2-bar{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:80;width:min(1080px,94vw);display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:16px;padding:10px 14px;border-radius:26px;background:linear-gradient(180deg,rgba(26,12,12,.88),rgba(10,5,5,.92));backdrop-filter:blur(14px);box-shadow:inset 0 0 0 1.5px rgba(255,47,58,.38),0 20px 44px -22px #000;font-family:var(--fh)}
+.wall2-bar .brand{display:flex;align-items:center;gap:12px;color:var(--bone);text-decoration:none}.wall2-bar .mark{width:46px;height:46px;border-radius:16px;display:grid;place-items:center;background:linear-gradient(145deg,rgba(255,47,58,.35),rgba(255,47,58,.08));box-shadow:inset 0 0 0 1.5px rgba(255,47,58,.55);color:#ffb0b4}.wall2-bar .mark svg{width:24px}.wall2-bar b{display:block;font-size:17px;line-height:1.1}.wall2-bar small{font-size:10.5px;color:#ff8a90}.wall2-bar nav{display:flex;justify-content:center;gap:4px}.wall2-bar nav a{padding:11px 20px;border-radius:15px;color:#cfc6c3;text-decoration:none;font:800 14.5px var(--fh)}.wall2-bar nav a.active,.wall2-bar nav a:hover{background:rgba(255,47,58,.2);color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,47,58,.6)}.wall2-bar .done{padding:10px 18px;border-radius:30px;box-shadow:inset 0 0 0 1.5px rgba(255,47,58,.6);font:800 13px var(--fh);color:#ff8a90;background:rgba(255,47,58,.08)}
+@media(max-width:760px){.wall2-bar{grid-template-columns:1fr auto}.wall2-bar nav{display:none}.wall2-bar .done{font-size:11px;padding:8px 12px}}
+
+/* تصميم abs-sixty-wall (3): مرحلة الجدار الجديدة */
+.wall3-hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(320px,1fr);gap:20px;align-items:center;width:min(1080px,94vw);margin:0 auto;padding:142px 0 30px;direction:rtl}
+.wall3-copy{display:grid;gap:18px;justify-items:start}.wall3-eyebrow{display:flex;align-items:center;gap:12px;color:#d8cfcc;font:800 13px var(--fh)}.wall3-eyebrow:after{content:"";width:46px;height:2px;background:#ff2f3a}
+.wall3-hero h1{margin:0;font:800 clamp(48px,7vw,92px)/1.02 var(--fh);letter-spacing:.01em}.wall3-hero h1 span{display:block;color:#ff2f3a;text-shadow:0 0 50px rgba(255,47,58,.38)}
+.wall3-hero p{margin:0;color:#bfb4b1;max-width:620px;font-size:14px;line-height:1.9}.wall3-readonly{width:100%;max-width:620px;padding:20px 24px;display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center;border:1px solid rgba(255,47,58,.45);border-radius:24px;background:linear-gradient(135deg,rgba(255,47,58,.12),rgba(10,5,5,.9));clip-path:polygon(18px 0,100% 0,100% calc(100% - 18px),calc(100% - 18px) 100%,0 100%,0 18px)}
+.wall3-readonly b{font:800 17px var(--fh);color:#ff8a90}.wall3-readonly small{display:block;color:#bfb4b1;line-height:1.7;font-size:12px;margin-top:4px}.wall3-lock{width:50px;height:50px;border-radius:18px;display:grid;place-items:center;background:rgba(255,47,58,.15);box-shadow:inset 0 0 0 1.5px rgba(255,47,58,.5);color:#ff2f3a;font-size:24px}
+.wall3-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;width:100%;max-width:620px}.wall3-stats div{padding:16px 18px;border-radius:20px;background:rgba(255,255,255,.045);box-shadow:inset 0 0 0 1px rgba(255,255,255,.1);transition:transform .3s}.wall3-stats div:hover{transform:translateY(-4px)}.wall3-stats b{display:block;color:#ff2f3a;font:800 34px/1 var(--fh);direction:ltr;text-align:start}.wall3-stats small{color:#a59a96;font-size:12px}
+.wall3-progress{width:100%;max-width:620px;display:grid;gap:8px}.wall3-progress .prow{display:flex;justify-content:space-between;color:#d8cfcc;font:800 13px var(--fh)}.wall3-progress .prow b{direction:ltr;color:#fff}.wall3-progress i{height:9px;border-radius:9px;background:rgba(255,255,255,.08);overflow:hidden;display:block;position:relative}.wall3-progress i:after{content:"";position:absolute;inset:0;background:linear-gradient(270deg,#ff4b53,#fff);box-shadow:0 0 14px #ff2f3a}
+.wall3-art{position:relative;display:grid;place-items:center;min-height:420px}.wall3-ring{position:relative;width:min(400px,86vw);aspect-ratio:1;border-radius:50%;display:grid;place-items:center;align-content:center;text-align:center;color:#fff;font:italic 800 clamp(74px,10vw,132px)/1 var(--fh);background:radial-gradient(circle at center,#ff2f3a 0,#5b1019 37%,#16080b 52%,transparent 53%),repeating-conic-gradient(from -90deg,rgba(255,255,255,.95) 0 2deg,transparent 2deg 6deg);filter:drop-shadow(0 0 24px rgba(255,47,58,.3));animation:wall3Pulse 5s ease-in-out infinite}.wall3-ring:before{content:"";position:absolute;inset:28%;border-radius:50%;box-shadow:0 0 0 1px rgba(255,255,255,.18),0 0 40px rgba(255,47,58,.5)}.wall3-ring small{display:block;font:800 16px var(--fh);color:#ffd0d3;margin-top:-20px}.wall3-chip{position:absolute;padding:9px 17px;border-radius:30px;background:rgba(12,6,6,.88);box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.16);font:800 13px var(--fh);animation:wall3Float 5s ease-in-out infinite}.wall3-chip.one{top:9%;right:2%}.wall3-chip.two{top:43%;left:0;color:#ffb0b4;animation-delay:.8s}.wall3-chip.three{bottom:9%;right:7%;animation-delay:1.5s}@keyframes wall3Pulse{50%{transform:scale(1.03);filter:drop-shadow(0 0 38px rgba(255,47,58,.5))}}@keyframes wall3Float{50%{transform:translateY(-8px)}}
+@media(max-width:900px){.wall3-hero{grid-template-columns:1fr;padding-top:126px}.wall3-art{min-height:340px;order:-1}.wall3-hero h1{font-size:58px}}
+@media(max-width:600px){.wall3-hero{padding-top:116px}.wall3-stats{gap:8px}.wall3-stats div{padding:13px 10px}.wall3-stats b{font-size:24px}.wall3-hero h1{font-size:43px}.wall3-hero p{font-size:13px}.wall3-chip{font-size:11px;padding:7px 12px}}
+.wall2-bar{display:none!important}.bar2{position:relative;top:auto;z-index:10;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:16px;width:min(1080px,94vw);margin:18px auto 0;padding:10px 14px;border-radius:26px;background:linear-gradient(180deg,rgba(26,12,12,.82),rgba(10,5,5,.86));backdrop-filter:blur(14px);box-shadow:inset 0 0 0 1.5px rgba(255,47,58,.38),0 20px 44px -22px #000}.bar2 .br{display:flex;align-items:center;gap:12px}.bar2 .ib{width:46px;height:46px;border-radius:16px;display:grid;place-items:center;background:linear-gradient(145deg,rgba(255,47,58,.35),rgba(255,47,58,.08));box-shadow:inset 0 0 0 1.5px rgba(255,47,58,.55);color:#ffb0b4}.bar2 .ib svg{width:24px}.bar2 .br b{display:block;font:800 17px/1.1 var(--fh)}.bar2 .br small{font:700 10.5px var(--fh);color:#ff8a90}.bar2 .tabs{display:flex;gap:4px;justify-content:center}.bar2 .tabs button{border:0;background:none;cursor:pointer;padding:11px 20px;border-radius:15px;font:800 14.5px var(--fh);color:#cfc6c3}.bar2 .tabs button.on,.bar2 .tabs button:hover{background:rgba(255,47,58,.2);color:#fff}.bar2 .done{padding:10px 18px;border-radius:30px;box-shadow:inset 0 0 0 1.5px rgba(255,47,58,.6);font:800 13px var(--fh);color:#ff8a90;background:rgba(255,47,58,.08)}
+.h2s{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(320px,1fr);gap:20px;align-items:center;padding:46px 0 18px;width:min(1080px,94vw);margin:auto}.h2s .tx{display:grid;gap:18px;justify-items:start}.h2s .eb{display:flex;align-items:center;gap:12px;font:800 13px var(--fh);color:#d8cfcc}.h2s .eb:after{content:"";width:46px;height:2px;background:#ff2f3a}.h2s .tt{margin:0;font:800 clamp(46px,7vw,92px)/1.02 var(--fh)}.h2s .tt span{display:block;color:#ff2f3a;text-shadow:0 0 50px rgba(255,47,58,.4)}.h2s .acts{display:flex;flex-wrap:wrap;gap:12px}.bar2 .done svg{width:15px;height:15px}.ro2{padding:20px 24px;display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center;max-width:620px;background:linear-gradient(135deg,rgba(255,47,58,.12),rgba(10,5,5,.9));border:1px solid rgba(255,47,58,.45);border-radius:26px}.ro2 h4{margin:0 0 4px;font:800 17px var(--fh);color:#ff8a90}.ro2 p{margin:0;font-size:13.5px;color:#bfb4b1;line-height:1.7}.ro2 .lk{width:50px;height:50px;border-radius:18px;display:grid;place-items:center;background:rgba(255,47,58,.15);box-shadow:inset 0 0 0 1.5px rgba(255,47,58,.5);color:#ff2f3a}.ro2 .lk svg{width:24px;height:24px}.st3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;width:100%;max-width:620px}.st3 div{padding:16px 18px;border-radius:22px;background:rgba(255,255,255,.045);box-shadow:inset 0 0 0 1px rgba(255,255,255,.1)}.st3 b{display:block;font:800 34px/1 var(--fh);color:#ff2f3a;direction:ltr;text-align:start}.st3 span{font-size:13px;color:#a59a96}.pr{width:100%;max-width:620px;display:grid;gap:8px}.pr .l{display:flex;justify-content:space-between;font:800 13px var(--fh)}.pr .bar{height:9px;border-radius:9px;background:rgba(255,255,255,.08);overflow:hidden}.pr .bar i{display:block;height:100%;width:100%;border-radius:9px;background:linear-gradient(270deg,#ff4b53,#fff);box-shadow:0 0 14px #ff2f3a}.pr small{color:#a59a96;font-size:12.5px}.pr small b{color:#ff8a90}.art2{position:relative;display:grid;place-items:center;min-height:420px}.banner{width:min(1080px,94vw);margin:10px auto 0;padding:22px 26px;display:grid;grid-template-columns:auto 1fr auto;gap:18px;align-items:center;border:1px solid rgba(255,47,58,.45);border-radius:28px;background:linear-gradient(135deg,rgba(255,47,58,.14),rgba(10,5,5,.92))}.banner .lk{width:54px;height:54px;border-radius:18px;display:grid;place-items:center;background:rgba(255,47,58,.15);color:#ff2f3a}.banner .lk svg{width:26px;height:26px}.banner h4{margin:0 0 3px;font:800 20px var(--fh)}.banner p{margin:0;color:#bfb4b1;font-size:13.5px}
+@media(max-width:900px){.bar2{grid-template-columns:auto 1fr}.bar2 .done{display:none}.h2s{grid-template-columns:1fr}.art2{order:-1;min-height:320px}}
+/* Tighten the archive title block so the hero does not leave a large empty band. */
+.h2s{gap:16px;padding-top:28px;padding-bottom:8px}.h2s .tx{gap:14px}
+@media(max-width:640px){.bar2 .tabs button{padding:9px 12px;font-size:13px}.bar2 .br small{display:none}.banner{grid-template-columns:1fr;text-align:center;justify-items:center}.st3 b{font-size:26px}}
+/* عند فتح صفحة الجدار نعرض واجهة wall (2) فقط، ثم نترك شبكة البيانات القديمة الحقيقية أسفلها. */
+body > nav.topnav, body > header.hero, main > .arch-sec { display:none !important; }
+:root{--fh:"Changa","Tajawal",Tahoma,sans-serif;--f:"Tajawal",Tahoma,Arial,sans-serif}
+body{font-family:var(--f);background:#080404}
+.bg-stage{background:linear-gradient(rgba(6,2,2,.52),rgba(6,2,2,.78)),url('../bg-pc.jpg') center/cover no-repeat !important}
+.art2 .ringa{--rs:min(400px,86vw);position:relative;width:var(--rs);height:var(--rs);flex:none}
+.art2 .ringa svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.art2 .ringa .sg{opacity:0}.art2 .ringa.go .sg{animation:wall2-sg .35s cubic-bezier(.2,.9,.3,1.3) forwards;animation-delay:calc(var(--i)*22ms)}
+.art2 .ringa .ctr{position:absolute;inset:0;display:grid;place-items:center;text-align:center;pointer-events:none}
+.art2 .ringa .ctr b{display:block;font:800 calc(var(--rs)*.34)/1 var(--fh);font-style:italic;background:linear-gradient(180deg,#fff,#ffb0b4);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 18px rgba(255,47,58,.6))}
+.art2 .ringa .ctr small{font:800 calc(var(--rs)*.075) var(--fh);color:#ffd0d3;letter-spacing:1px}
+.art2 .ch{position:absolute;display:inline-flex;align-items:center;gap:8px;padding:9px 18px;border-radius:30px;background:rgba(12,6,6,.86);backdrop-filter:blur(8px);box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.16);font:800 14px var(--fh);animation:wall2-fl 5s ease-in-out infinite}
+.art2 .ch svg{width:16px;height:16px;color:#ff2f3a}.art2 .drop{position:absolute;width:9px;height:13px;border-radius:50% 50% 50% 50%/60% 60% 40% 40%;background:linear-gradient(180deg,#e8f8ff,#7cc8ff);animation:wall2-dr 2.6s ease-in infinite;opacity:0}
+@keyframes wall2-sg{from{opacity:0;transform:scale(.25)}to{opacity:1;transform:scale(1)}}@keyframes wall2-fl{50%{transform:translateY(-8px)}}@keyframes wall2-dr{0%{opacity:0;transform:translateY(-12px) scale(.7)}25%{opacity:.8}100%{opacity:0;transform:translateY(34px) scale(1)}}
+@media (max-width: 860px) and (orientation: landscape) {
+  .lb { grid-template-columns: minmax(0, 1fr) min(280px, 42vw); grid-template-rows: minmax(0, 1fr); }
+  .lb .side { max-height: none; border-top: none; border-inline-start: 1px solid var(--line); }
+  .lb .side .acts .btn { padding: 9px 6px; font-size: 10.5px; }
+}
+
+/* ================= فوتر ================= */
+.footer { margin-top: 46px; border-top: 1px solid var(--line); background: linear-gradient(180deg, transparent, rgba(12, 7, 9, 0.9)); }
+.footer .in { padding: 30px 0 36px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.footer .powered { font-size: 10.5px; font-weight: 900; letter-spacing: 0.3em; color: var(--faint); }
+.footer a.own { display: inline-flex; align-items: center; gap: 8px; font-size: 11.5px; font-weight: 800; color: var(--muted); padding: 8px 14px; border-radius: 99px; border: 1px solid var(--line); transition: 0.25s; }
+.footer a.own:hover { color: var(--rose-soft); border-color: var(--line-strong); }
+.footer a.own img { width: 20px; height: 20px; border-radius: 6px; }
+
+/* سكيلتون الجدار */
+.skel-card { border-radius: 22px; }
+.notice { display: flex; gap: 12px; align-items: flex-start; padding: 16px 18px; border-radius: 17px; border: 1px solid rgba(255, 176, 32, 0.4); background: rgba(255, 176, 32, 0.06); margin-bottom: 16px; }
+.notice svg { width: 20px; height: 20px; color: var(--warn); flex: none; margin-top: 2px; }
+.notice b { display: block; font-size: 13px; font-weight: 900; color: var(--warn); }
+.notice p { margin: 3px 0 0; font-size: 12px; color: var(--muted); font-weight: 600; }
+</style>
+</head>
+<body>
+<header class="wall2-bar" aria-label="تنقل جدار الستين">
+  <a class="brand" href="/">
+    <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="5" rx="1.5"/><path d="M5 9v10a1.5 1.5 0 001.5 1.5h11A1.5 1.5 0 0019 19V9M10 13h4"/></svg></span>
+    <span><b>أرشيف جدار الـ60</b><small>أساطير الشات · ذكرى دائمة</small></span>
+  </a>
+  <nav><a class="active" href="#wall">الجدار</a><a href="#messages">الرسائل</a><a href="/">الموقع الرئيسي</a></nav>
+  <span class="done">✓ 60 / 60 مكتمل</span>
+</header>
+<script>
+/* انتقال جدار الستين: نفس بوابة portal-60-auto عند الوصول من الصفحة الرئيسية. */
+(function(){
+  var go=false; try{go=sessionStorage.getItem('abs60')==='1'; sessionStorage.removeItem('abs60')}catch(e){}
+  if(!go)return;
+  var s=document.createElement('style');s.textContent='#abs60-arrive{position:fixed;inset:0;z-index:99999;pointer-events:none;background:radial-gradient(circle at 50% 50%,#ff4b53 0,#c0161f 35%,#2a0508 80%);clip-path:circle(160vmax at 50% 50%);will-change:clip-path;transform:translateZ(0);contain:strict;animation:abs60-arrive 1.8s cubic-bezier(.7,0,.2,1) forwards}#abs60-arrive:after{content:"60";position:absolute;inset:0;display:grid;place-items:center;font:800 min(46vw,420px)/1 Changa,Tajawal,sans-serif;font-style:italic;color:rgba(255,255,255,.12);-webkit-text-stroke:3px rgba(255,255,255,.4)}@keyframes abs60-arrive{to{clip-path:circle(0 at 50% 50%)}}';document.head.appendChild(s);
+  var p=document.createElement('div');p.id='abs60-arrive';document.body.appendChild(p);setTimeout(function(){p.remove();s.remove()},1900);
+}());
+</script>
+<div class="bg-stage"><i class="a1"></i><i class="a2"></i><i class="a3"></i></div>
+<div class="grain"></div>
+
+<!-- ===== نافذة علوية ===== -->
+<nav class="topnav">
+  <div class="wrap in">
+    <a class="brand" href="#top">
+      <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="5" rx="1.5"/><path d="M5 9v10a1.5 1.5 0 001.5 1.5h11A1.5 1.5 0 0019 19V9M10 13h4"/></svg></span>
+      <span><b>أرشيف جدار الـ60</b><small>أساطير الشات · ذكرى دائمة</small></span>
+    </a>
+    <div class="nav-links">
+      <a href="#wall" class="on">الجدار</a>
+      <a href="#messages" data-gal-link="messages">الرسائل</a>
+      <a href="../">الموقع الرئيسي</a>
+    </div>
+    <div class="nav-acts">
+      <span class="day-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span class="lbl">مكتمل</span> <b class="mono-num">60 / 60</b></span>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== هيرو ===== -->
+<header class="hero wrap" id="top">
+  <div>
+    <span class="eyebrow">الأرشيف · اكتمل تحدي الـ60 يوم</span>
+    <h1>ستون يوماً…<br><span class="grad">صارت ذكرى</span></h1>
+    <p class="lead">اكتمل التحدي، وكل إيديت وكل رسالة صارت جزءاً من هذا الأرشيف الدائم. تصفّحوا الذكريات وقت ما شاءوا — الجدار باقي للأبد.</p>
+    <div class="keepsake">
+      <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="3"/><path d="M8 11V7a4 4 0 018 0v4"/></svg></span>
+      <div><b>أرشيف للقراءة فقط</b><p>ما عاد الجدار يستقبل صوراً أو فيديوهات أو رسائل جديدة. كل المشاركات المعتمدة محفوظة هنا كما هي — ذكرى دائمة على الموقع مدى الحياة.</p></div>
+    </div>
+    <div class="hero-stats">
+      <div class="hstat"><b class="mono-num" id="stEdits">0</b><span>إيديت محفوظ</span></div>
+      <div class="hstat"><b class="mono-num" id="stPeople">0</b><span>مشارك</span></div>
+      <div class="hstat"><b class="mono-num" id="stMsgs">0</b><span>رسالة</span></div>
+    </div>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#wall"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-4.5-4.5L6 21"/></svg> تصفّح الإيديتات</a>
+      <a class="btn" href="#messages" data-gal-link="messages"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 01-8 8H4l2-3a8 8 0 1115-5z"/></svg> رسائل الأساطير</a>
+    </div>
+    <div class="hero-day">
+      <div class="row"><span>اكتمل التحدي</span><b class="mono-num">60 / 60 يوم</b></div>
+      <div class="pbar"><i style="width:100%"></i></div>
+      <p class="note">ذاب الثلج <b>100%</b> · الآيفون تسلّم، والذكريات باقية</p>
+    </div>
+  </div>
+  <div class="hero-vis" id="heroVis">
+    <div class="glow"></div>
+    <div class="ring"></div>
+    <div class="phone3d" id="phone3d" role="img" aria-label="آيفون 18 برو أحمر — الواجهة الأمامية والخلفية">
+      <div class="phone-model">
+        <div class="duo">
+          <div class="ip ipb">
+            <div class="plat">
+              <i class="lens" style="left:2px;top:8px"></i>
+              <i class="lens" style="left:30px;top:21px"></i>
+              <i class="lens" style="left:2px;top:35px"></i>
+              <i class="fls"></i>
+              <i class="mc"></i>
+              <i class="ld"></i>
+            </div>
+            <div class="gp"></div>
+            <svg class="apl" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701" />
+            </svg>
+            <div class="shine"></div>
+          </div>
+          <div class="ip ipf">
+            <div class="scr">
+              <i class="wa a1"></i>
+              <i class="wa a2"></i>
+              <i class="wa a3"></i>
+              <i class="wa a4"></i>
+              <i class="di2"></i>
+              <div class="shine"></div>
+            </div>
+            <i class="sb s1"></i>
+            <i class="sb s2"></i>
+            <i class="sb s3"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <span class="fchip c1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-4.5-4.5L6 21"/></svg> صور</span>
+    <span class="fchip c2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="14" height="14" rx="3"/><path d="M16 10l6-3v10l-6-3"/></svg> فيديوهات</span>
+    <span class="fchip c3"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.7-10-9.3C.4 8.6 2.4 4.5 6.2 4.5c2.2 0 3.9 1.2 5.8 3.4 1.9-2.2 3.6-3.4 5.8-3.4 3.8 0 5.8 4.1 4.2 7.2C19.5 16.3 12 21 12 21z"/></svg> ذكريات</span>
+  </div>
+</header>
+
+<main class="wrap">
+  <!-- ===== شريط الأرشيف ===== -->
+  <section class="arch-sec rv">
+    <div class="arch-note">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="5" rx="1.5"/><path d="M5 9v10a1.5 1.5 0 001.5 1.5h11A1.5 1.5 0 0019 19V9M10 13h4"/></svg></span>
+      <div>
+        <b>هذا الجدار صار أرشيفاً دائماً</b>
+        <p>اكتملت الـ60 يوم. الصور والفيديوهات والرسائل المعتمدة محفوظة للعرض فقط — لا رفع ولا رسائل ولا إعجابات جديدة.</p>
+      </div>
+      <span class="chip chip-rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="4" y="11" width="16" height="10" rx="3"/><path d="M8 11V7a4 4 0 018 0v4"/></svg> مقفل</span>
+    </div>
+  </section>
+
+  <!-- ===== واجهة abs-sixty-wall (2) الأصلية + الجدار الحقيقي ===== -->
+  <header class="bar2">
+    <div class="br"><span class="ib"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="5" rx="1.5"/><path d="M5 9v10a1 1 0 001 1h12a1 1 0 001-1V9M10 13h4"/></svg></span><div><b>أرشيف جدار الـ60</b><small>أساطير الشات · ذكرى دائمة</small></div></div>
+    <nav class="tabs"><button class="on" type="button" data-bar-gal="media">الجدار</button><button type="button" data-bar-gal="messages">الرسائل</button><button type="button" data-bar-home>الموقع الرئيسي</button></nav>
+    <span class="done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l5 5L20 7"/></svg>60 / 60 مكتمل</span>
+  </header>
+  <section class="h2s" aria-labelledby="wall2Title">
+    <div class="tx">
+      <div class="eb">الأرشيف · اكتمل تحدي الـ60 يوم</div>
+      <h1 class="tt" id="wall2Title">ستون يوماً…<span>صارت ذكرى</span></h1>
+      <p class="d60">اكتمل التحدي، وكل إيديت وكل رسالة صارت جزءاً من هذا الأرشيف الدائم. تصفّحوا الذكريات وقت ما شاءوا — الجدار باقي للأبد.</p>
+      <div class="ro2"><div><h4>أرشيف للقراءة فقط</h4><p>ما عاد الجدار يستقبل صوراً أو فيديوهات أو رسائل جديدة. كل المشاركات المعتمدة محفوظة هنا كما هي — ذكرى دائمة على الموقع مدى الحياة.</p></div><span class="lk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2.5"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span></div>
+      <div class="st3"><div><b id="wall2-edits">0</b><span>إيديت محفوظ</span></div><div><b id="wall2-users">0</b><span>مشارك</span></div><div><b id="wall2-msgs">0</b><span>رسالة</span></div></div>
+      <div class="acts"><a class="btn btn-primary" href="#wall">تصفّح الإيديتات</a><a class="btn btn-ghost" href="#messages" data-gal-link="messages">رسائل الأساطير</a></div>
+      <div class="pr"><div class="l"><span>اكتمل التحدي</span><b>60 / 60 يوم</b></div><div class="bar"><i id="pbar"></i></div><small><b>100%</b> ذاب الثلج · الجائزة تسلّمت، والذكريات باقية</small></div>
+    </div>
+    <div class="art2" id="art2" aria-hidden="true"></div>
+  </section>
+<section class="banner" hidden><span class="lk">▣</span><div><h4>هذا الجدار صار أرشيفاً دائماً</h4><p>اكتملت الـ60 يوم. الصور والفيديوهات والرسائل المعتمدة محفوظة للعرض فقط — لا رفع ولا رسائل ولا إعجابات جديدة.</p></div><span class="lockc">مقفل</span></section>
+
+  <!-- ===== الجدار ===== -->
+  <section class="wall-sec" id="wall">
+    <div class="wall-head rv">
+      <div>
+        <span class="eyebrow">أرشيف المجتمع</span>
+        <h2 class="sec-title" id="wallTitle">الإيديتات</h2>
+        <p class="sec-note" id="wallNote">ترتيب متوازن — لا عمود أطول من الثاني</p>
+      </div>
+      <div class="gallery-seg" id="gallerySeg" role="tablist">
+        <button type="button" class="on" data-gal="media" role="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-4.5-4.5L6 21"/></svg> الصور والفيديوهات <span class="n" id="galMediaN">0</span></button>
+        <button type="button" data-gal="messages" role="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 01-8 8H4l2-3a8 8 0 1115-5z"/></svg> الرسائل <span class="n" id="galMsgN">0</span></button>
+      </div>
+    </div>
+
+    <div class="wall-tools rv" id="mediaTools">
+      <div class="seg" id="sortSeg">
+        <button type="button" class="on" data-sort="balanced"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.1 6.5L21 10l-6.9 1.5L12 18l-2.1-6.5L3 10l6.9-1.5z"/></svg> متوازن</button>
+        <button type="button" data-sort="newest"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg> الأحدث</button>
+        <button type="button" data-sort="top"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.7-10-9.3C.4 8.6 2.4 4.5 6.2 4.5c2.2 0 3.9 1.2 5.8 3.4 1.9-2.2 3.6-3.4 5.8-3.4 3.8 0 5.8 4.1 4.2 7.2C19.5 16.3 12 21 12 21z"/></svg> الأكثر إعجاباً</button>
+      </div>
+      <label class="switch"><input type="checkbox" id="videosOnly"><i></i><span>فيديوهات فقط</span></label>
+      <button class="btn btn-sm btn-ghost" id="refreshWall" title="تحديث"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 11-2.6-6.3M21 3v6h-6"/></svg></button>
+      <span class="count" id="wallCount"></span>
+    </div>
+    <div class="wall-tools rv hidden" id="msgTools">
+      <div class="seg" id="msgSortSeg">
+        <button type="button" class="on" data-msort="newest"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg> الأحدث</button>
+        <button type="button" data-msort="random"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.1 6.5L21 10l-6.9 1.5L12 18l-2.1-6.5L3 10l6.9-1.5z"/></svg> عشوائي</button>
+        <button type="button" data-msort="top"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.7-10-9.3C.4 8.6 2.4 4.5 6.2 4.5c2.2 0 3.9 1.2 5.8 3.4 1.9-2.2 3.6-3.4 5.8-3.4 3.8 0 5.8 4.1 4.2 7.2C19.5 16.3 12 21 12 21z"/></svg> الأكثر إعجاباً</button>
+      </div>
+      <span class="count" id="msgCount"></span>
+    </div>
+
+    <div id="wallNotice"></div>
+    <div class="wall-cols" id="wallCols" aria-live="polite"></div>
+    <div id="wallEmpty"></div>
+  </section>
+</main>
+
+<!-- ===== فوتر ===== -->
+<footer class="footer">
+  <div class="wrap in">
+    <div>
+      <p class="powered">POWERED BY HSG</p>
+      <p class="muted" style="font-size:11.5px;margin:6px 0 0;font-weight:700">أرشيف جدار إيديتات أساطير الشات — تحدي الـ60 يوم · ذكرى دائمة</p>
+    </div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap">
+      <a class="own" href="../"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5L12 3l9 7.5M5 9.5V21h14V9.5"/></svg> الموقع الرئيسي</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== لايت بوكس ===== -->
+<div class="lb-backdrop" id="lb" role="dialog" aria-modal="true" aria-label="عرض الإيديت">
+  <div class="lb">
+    <div class="stage" id="lbStage">
+      <button class="btn btn-icon closebtn" id="lbClose" aria-label="إغلاق"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+      <button class="navbtn prev" id="lbPrev" aria-label="السابق"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+      <button class="navbtn next" id="lbNext" aria-label="التالي"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></button>
+      <span class="counter mono-num" id="lbCount"></span>
+    </div>
+    <div class="side">
+      <div class="who">
+        <span class="badge" id="lbBadge">?</span>
+        <span style="min-width:0"><b id="lbName"></b><small id="lbWhen"></small></span>
+      </div>
+      <p class="cap" id="lbCap"></p>
+      <span class="lb-likes" id="lbLikes"></span>
+      <div class="acts">
+        <button class="btn" id="lbCopy"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 007.5.5l3-3a5 5 0 00-7-7l-1.7 1.7M14 11a5 5 0 00-7.5-.5l-3 3a5 5 0 007 7l1.7-1.7"/></svg> نسخ الرابط</button>
+        <a class="btn btn-ghost" id="lbOpen" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 10l6 6 6-6M4 20h16"/></svg> الملف الأصلي</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="arrival.js"></script>
+<script src="core.js"></script>
+<script src="wall.js"></script>
+<script src="wall2-art.js"></script>
+</body>
+</html>

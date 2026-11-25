@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>موقعي</title>
+<style>
+/* ستايل صفحة التجربة فقط — احذفه، هذا مو جزء من الأنميشن */
+body{margin:0;min-height:100vh;display:grid;place-items:center;background:#080404;color:#ece6db;font-family:Tahoma,sans-serif;text-align:center}
+h1{font-size:clamp(32px,6vw,64px);margin:0 0 10px}
+</style>
+</head>
+<body>
+
+<!-- محتوى موقعك (للتجربة فقط) -->
+<div>
+  <h1>هذا موقعي</h1>
+  <p>الأنميشن الأحمر يشتغل لحاله أول ما تفتح الصفحة</p>
+</div>
+
+
+<!-- ===================================================================
+     انسخ من هنا إلى النهاية وحطه قبل </body> في موقعك. هذا كل شي.
+     =================================================================== -->
+<script>
+(function(){
+  /* ===== إعدادات ===== */
+  var EXPAND = 800;   // مدة توسع الدائرة (ms)
+  var HOLD   = 250;   // مدة بقاء الشاشة حمراء (ms)
+  var SHRINK = 850;   // مدة الانكماش (ms)
+  var X = "50%", Y = "50%";   // مكان خروج الدائرة (الوسط)
+
+  /* الخط */
+  var f = document.createElement("link");
+  f.rel = "stylesheet";
+  f.href = "https://fonts.googleapis.com/css2?family=Changa:wght@800&display=swap";
+  document.head.appendChild(f);
+
+  /* الستايل */
+  var st = document.createElement("style");
+  st.textContent =
+    '#abs60-portal{position:fixed;inset:0;z-index:2147483647;pointer-events:none;' +
+      'background:radial-gradient(circle at ' + X + ' ' + Y + ',#ff4b53 0,#c0161f 35%,#2a0508 80%);' +
+      'clip-path:circle(0px at ' + X + ' ' + Y + ');' +
+      'transition:clip-path ' + EXPAND + 'ms cubic-bezier(.7,0,.2,1)}' +
+    '#abs60-portal.in{clip-path:circle(160vmax at ' + X + ' ' + Y + ')}' +
+    '#abs60-portal.out{transition-duration:' + SHRINK + 'ms}' +
+    '#abs60-portal::after{content:"60";position:absolute;inset:0;display:grid;place-items:center;' +
+      'font:800 min(46vw,420px)/1 "Changa","Tajawal",Tahoma,sans-serif;font-style:italic;' +
+      'color:rgba(255,255,255,.12);-webkit-text-stroke:3px rgba(255,255,255,.4)}';
+  document.head.appendChild(st);
+
+  /* العنصر */
+  var p = document.createElement("div");
+  p.id = "abs60-portal";
+  document.body.appendChild(p);
+
+  /* التشغيل التلقائي */
+  function run(){
+    void p.offsetWidth;                         // يثبّت الحالة الابتدائية
+    requestAnimationFrame(function(){
+      p.classList.add("in");                    // 1) الدائرة تتوسع وتغطي الشاشة
+      setTimeout(function(){
+        p.classList.add("out");
+        p.classList.remove("in");               // 2) تنكمش وتكشف الموقع
+        setTimeout(function(){
+          p.remove();                           // 3) تنحذف بعد ما تخلص
+        }, SHRINK + 100);
+      }, EXPAND + HOLD);
+    });
+  }
+
+  /* ينتظر الخط شوي عشان الـ60 يطلع بشكله الصحيح، وما يتأخر أكثر من 600ms */
+  var started = false;
+  function go(){ if(started) return; started = true; run(); }
+  if (document.fonts && document.fonts.load){
+    document.fonts.load('800 100px "Changa"', "60").then(go, go);
+    setTimeout(go, 600);
+  } else go();
+
+  /* لو تبيه يشتغل يدوي بأي وقت: abs60Replay() */
+  window.abs60Replay = function(){
+    if(document.getElementById("abs60-portal")) return;
+    p = document.createElement("div");
+    p.id = "abs60-portal";
+    document.body.appendChild(p);
+    started = true; run();
+  };
+})();
+</script>
+<!-- ===== النهاية ===== -->
+
+</body>
+</html>
